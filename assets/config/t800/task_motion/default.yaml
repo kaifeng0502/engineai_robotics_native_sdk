@@ -48,6 +48,9 @@ tasks:
       - pd_stand
       - stance_to_supine
       - dance
+      - blink_01
+      - blink_02
+      - blink_03
     key: [LB, B]
 
   - motion: dance
@@ -84,3 +87,33 @@ tasks:
       - pd_stand
     auto_transition: passive
     key: [START, CROSS_X_DOWN]
+
+  - motion: blink_01
+    period: 0.005
+    runner:
+      - name: blink_native_tracking_runner
+        enabled: true
+        param_tag: blink_native/motions/Block_front_hik
+    manual_transition: [passive]
+    auto_transition: walk
+    key: [RB, A]
+
+  - motion: blink_02
+    period: 0.005
+    runner:
+      - name: blink_native_tracking_runner
+        enabled: true
+        param_tag: blink_native/motions/Duck_Left_hik
+    manual_transition: [passive]
+    auto_transition: walk
+    key: [RB, X]
+
+  - motion: blink_03
+    period: 0.005
+    runner:
+      - name: blink_native_tracking_runner
+        enabled: true
+        param_tag: blink_native/motions/Duck_Right__hik
+    manual_transition: [passive]
+    auto_transition: walk
+    key: [RB, Y]

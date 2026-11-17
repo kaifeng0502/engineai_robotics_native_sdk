@@ -1,0 +1,25 @@
+{
+  "profiles": {
+    "Duck_Right__hik": {
+      "sha256": {
+        "parameters.npz": "b75f819dcc9ad43e2879ab0795486a538172103cb61673169eaf47912d45ce3b",
+        "nominal.npz": "da86dc3117ba0bde8df1500a18e299d72a46889edd15b3fb9a0a5a5dbe4a5cbc"
+      }
+    },
+    "Right_leg_to_Kick_Knee_hik": {
+      "sha256": {
+        "parameters.npz": "0206fb04e9e899ee191a11503d8f241a84018a38b227115199367ac6b7e92d4b",
+        "nominal.npz": "3dd3703f960d8968f143ab04be15eb0be045d13ae54aafcad158c121b457ac40"
+      }
+    },
+    "Side_left_kick__hik": {
+      "sha256": {
+        "parameters.npz": "dd34d145045f770a9ce1af2bb10326c7694667d136ec1591c295b8abe9cc6a2e",
+        "nominal.npz": "3d7cb6c1684eace34774e848835621637b31ab3e8754fe1ef3f819166e82c316"
+      }
+    }
+  },
+  "simulation_candidate": true,
+  "reference_cancelled": false,
+  "npz_payloads_byte_identical_to_desktop": true
+}

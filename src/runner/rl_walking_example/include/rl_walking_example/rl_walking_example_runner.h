@@ -17,6 +17,7 @@ public:
       const std::shared_ptr<data::DataStore> &data_store);
   ~RlWalkingExamplePm01Runner() = default;
 
+  bool IsTransitionAllowed(std::string_view target_motion) const override;
   bool Enter() override;
   void Run() override;
   TransitionState TryExit() override;
@@ -28,6 +29,8 @@ public:
   void Log();
 
 private:
+  mutable bool blink_transition_requested_ = false;
+  bool blend_all_return_positions_ = false;
   void UpdateRemoteCommand();
   void CalculateObservation();
   void CalculateMotorCommand();

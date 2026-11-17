@@ -29,6 +29,7 @@
  */
 
 #include "rl_walking_example/rl_walking_example_runner.h"
+#include "rl_tracking/blink_walk_return.h"
 
 #include <glog/logging.h>
 
@@ -102,7 +103,13 @@ void RlWalkingExamplePm01Runner::TeardownContext() {}
  *
  * @return true if initialization succeeds and the Runner is ready to run.
  */
+bool RlWalkingExamplePm01Runner::IsTransitionAllowed(std::string_view target_motion) const {
+  blink_transition_requested_ = target_motion.starts_with("blink_");
+  return true;
+}
+
 bool RlWalkingExamplePm01Runner::Enter() {
+  blink_transition_requested_ = false;
   // --- Step 1: Hot-switch parameters ---
   // If an external module has set a new param_tag_ (e.g., via the task system),
   // reload parameters
@@ -202,6 +209,7 @@ bool RlWalkingExamplePm01Runner::Enter() {
   GetMutableOutput().Reset();
 
   initial_joint_q_ = last_joint_q_cmd;
+  blend_all_return_positions_ = blink::TakeWalkingPositionBlend(data_store_, initial_joint_q_);
 
   return true;
 }
@@ -247,6 +255,7 @@ void RlWalkingExamplePm01Runner::Run() {
  *
  * When the system requests this Runner to exit, this method is called
  * repeatedly:
+ *   - A requested Blink transition completes immediately under operator control.
  *   - If the joint override command is still enabled, continue executing Run()
  *     to maintain control and return kTrying (exit not yet complete).
  *   - Once the override command is disabled, return kCompleted to allow exit.
@@ -255,6 +264,9 @@ void RlWalkingExamplePm01Runner::Run() {
  * process.
  */
 TransitionState RlWalkingExamplePm01Runner::TryExit() {
+  if (blink_transition_requested_) {
+    return TransitionState::kCompleted;
+  }
   auto joint_override_command = data_store_->joint_override_command.Get();
   if (joint_override_command->IsEnable() == true) {
     Run();
@@ -487,8 +499,10 @@ void RlWalkingExamplePm01Runner::CalculateMotorCommand() {
     joint_kp_des_ = ratio * joint_kp_ + (1.0f - ratio) * initial_joint_kp_;
     joint_kd_des_ = ratio * joint_kd_ + (1.0f - ratio) * initial_joint_kd_;
     if (disable_transition_joint_idx_.size() > 0) {
-      q_des_(disable_transition_joint_idx_) =
-          q_policy(disable_transition_joint_idx_);
+      if (!blend_all_return_positions_) {
+        q_des_(disable_transition_joint_idx_) =
+            q_policy(disable_transition_joint_idx_);
+      }
       joint_kp_des_(disable_transition_joint_idx_) =
           kp_policy(disable_transition_joint_idx_);
       joint_kd_des_(disable_transition_joint_idx_) =

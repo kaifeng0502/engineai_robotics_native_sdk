@@ -10,7 +10,7 @@ set -e
 # !!! Sets the remote user and host
 remote_user="user"
 remote_host="192.168.0.163"
-remote_dir="~/projects/engineai_robotics"
+remote_dir="~/projects/engineai_robotics_blink_official"
 
 # Sets the remote destination
 remote_dest="${remote_user}@${remote_host}"
@@ -56,8 +56,8 @@ local_install_dir="$source_dir/build/${arch}/_install"
 echo "Installing for product: $product_name with mode: $active_mode and arch: $arch"
 
 temp_dir=$(mktemp -d)
-ssh_ctl_dir=$(mktemp -d)
-ssh_control_path="${ssh_ctl_dir}/ssh_%r_%h_%p"
+ssh_ctl_dir=$(mktemp -d /tmp/t800-ssh.XXXXXX)
+ssh_control_path="${ssh_ctl_dir}/%C"
 trap "ssh -o ControlPath=${ssh_control_path} -O exit ${remote_dest} 2>/dev/null || true; rm -rf $temp_dir $ssh_ctl_dir" EXIT
 
 echo "temp_dir: ${temp_dir}"
