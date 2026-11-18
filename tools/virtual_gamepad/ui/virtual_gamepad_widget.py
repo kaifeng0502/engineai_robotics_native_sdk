@@ -1,4 +1,6 @@
 import time
+import json
+from pathlib import Path
 
 from lcm_msgs.data import GamepadKeys
 from PyQt6.QtCore import Qt, QTimer
@@ -130,6 +132,13 @@ class VirtualGamepadWidget(QWidget):
             "walk: [LB, B]": ("LB", "B"),
             "dance: [RB, B]": ("RB", "B")
         }
+
+        # Read the same manifest as the SDK tasks; no second motion/key list.
+        manifest = Path(__file__).resolve().parents[3] / "assets/config/t800/blink_native/manifest.json"
+        if manifest.is_file():
+            for motion in json.loads(manifest.read_text(encoding="utf-8"))["motions"]:
+                warning = " ⚠ 腿部接触" if motion.get("known_issue") else ""
+                self.macros[motion["task"] + ": " + motion["label"] + warning] = tuple(motion["keys"])
 
         self.init_ui()
 

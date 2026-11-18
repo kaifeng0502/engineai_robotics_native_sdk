@@ -1,119 +1,408 @@
-# ----------------------- Motion Tasks ----------------------- #
+# 21 complete NPZ motions, one checkpoint-23000 actor. See docs/BLINK_FULL21.md.
 cpu:
   number: 3
   priority: 10
-
 tasks:
-  - motion: idle
-    period: 0.002
-    runner:
-      - name: idle_runner
-        enabled: true
-    manual_transition:
-      - passive
-    auto_transition: passive
-    key: [LB, START]
-
-  - motion: passive
-    period: 0.002
-    runner:
-      - name: passive_runner
-        enabled: true
-    manual_transition:
-      - idle
-      - pd_stand
-      - supine_to_stance
-    key: [LB, RB]
-
-  - motion: pd_stand
-    period: 0.002
-    runner:
-      - name: pd_stand_runner
-        enabled: true
-        param_tag: pd_stand
-    manual_transition:
-      - passive
-      - walk
-      - dance
-    key: [LB, A]
-
-  - motion: walk
-    period: 0.01
-    runner:
-      - name: rl_walking_example_runner
-        enabled: true
-        param_tag: rl_walking_example
-    manual_transition:
-      - passive
-      - pd_stand
-      - stance_to_supine
-      - dance
-      - blink_01
-      - blink_02
-      - blink_03
-    key: [LB, B]
-
-  - motion: dance
-    period: 0.02
-    runner:
-      - name: rl_dance_example_runner
-        enabled: true
-    manual_transition:
-      - passive
-      - pd_stand
-      - walk
-    auto_transition: walk
-    key: [RB, B]
-
-  - motion: supine_to_stance
-    period: 0.01
-    runner:
-      - name: rl_mimic_trajectory_runner
-        enabled: true
-        param_tag: rl_supine_to_stance
-    manual_transition:
-      - passive
-    auto_transition: walk
-    key: [START, CROSS_X_UP]
-
-  - motion: stance_to_supine
-    period: 0.01
-    runner:
-      - name: rl_mimic_trajectory_runner
-        enabled: true
-        param_tag: rl_stance_to_supine
-    manual_transition:
-      - passive
-      - pd_stand
-    auto_transition: passive
-    key: [START, CROSS_X_DOWN]
-
-  - motion: blink_01
-    period: 0.005
-    runner:
-      - name: blink_native_tracking_runner
-        enabled: true
-        param_tag: blink_native/motions/Block_front_hik
-    manual_transition: [passive]
-    auto_transition: walk
-    key: [RB, A]
-
-  - motion: blink_02
-    period: 0.005
-    runner:
-      - name: blink_native_tracking_runner
-        enabled: true
-        param_tag: blink_native/motions/Duck_Left_hik
-    manual_transition: [passive]
-    auto_transition: walk
-    key: [RB, X]
-
-  - motion: blink_03
-    period: 0.005
-    runner:
-      - name: blink_native_tracking_runner
-        enabled: true
-        param_tag: blink_native/motions/Duck_Right__hik
-    manual_transition: [passive]
-    auto_transition: walk
-    key: [RB, Y]
+- motion: idle
+  period: 0.002
+  runner:
+  - name: idle_runner
+    enabled: true
+  manual_transition:
+  - passive
+  auto_transition: passive
+  key:
+  - LB
+  - START
+- motion: passive
+  period: 0.002
+  runner:
+  - name: passive_runner
+    enabled: true
+  manual_transition:
+  - idle
+  - pd_stand
+  - supine_to_stance
+  key:
+  - LB
+  - RB
+- motion: pd_stand
+  period: 0.002
+  runner:
+  - name: pd_stand_runner
+    enabled: true
+    param_tag: pd_stand
+  manual_transition:
+  - passive
+  - walk
+  - dance
+  key:
+  - LB
+  - A
+- motion: walk
+  period: 0.01
+  runner:
+  - name: rl_walking_example_runner
+    enabled: true
+    param_tag: rl_walking_example
+  manual_transition:
+  - passive
+  - pd_stand
+  - stance_to_supine
+  - dance
+  - blink_01
+  - blink_02
+  - blink_03
+  - blink_04
+  - blink_05
+  - blink_06
+  - blink_07
+  - blink_08
+  - blink_09
+  - blink_10
+  - blink_11
+  - blink_12
+  - blink_13
+  - blink_14
+  - blink_15
+  - blink_16
+  - blink_17
+  - blink_18
+  - blink_19
+  - blink_20
+  - blink_21
+  key:
+  - LB
+  - B
+- motion: dance
+  period: 0.02
+  runner:
+  - name: rl_dance_example_runner
+    enabled: true
+  manual_transition:
+  - passive
+  - pd_stand
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - B
+- motion: supine_to_stance
+  period: 0.01
+  runner:
+  - name: rl_mimic_trajectory_runner
+    enabled: true
+    param_tag: rl_supine_to_stance
+  manual_transition:
+  - passive
+  auto_transition: walk
+  key:
+  - START
+  - CROSS_X_UP
+- motion: stance_to_supine
+  period: 0.01
+  runner:
+  - name: rl_mimic_trajectory_runner
+    enabled: true
+    param_tag: rl_stance_to_supine
+  manual_transition:
+  - passive
+  - pd_stand
+  auto_transition: passive
+  key:
+  - START
+  - CROSS_X_DOWN
+- motion: blink_01
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/01_front_block
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - START
+  - A
+- motion: blink_02
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/01_spin_kick_540
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - START
+  - B
+- motion: blink_03
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/02_left_duck
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - START
+  - X
+- motion: blink_04
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/03_right_duck
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - START
+  - Y
+- motion: blink_05
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/03_right_duck_left_kick
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - START
+  - CROSS_X_UP
+- motion: blink_06
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/04_back_duck
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - START
+  - CROSS_X_DOWN
+- motion: blink_07
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/04_left_duck_right_kick
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - START
+  - CROSS_Y_LEFT
+- motion: blink_08
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/06_left_arm_slam
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - START
+  - CROSS_Y_RIGHT
+- motion: blink_09
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/06_right_kick_knee
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - BACK
+  - A
+- motion: blink_10
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/07_left_block
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - BACK
+  - B
+- motion: blink_11
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/07_left_side_kick
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - BACK
+  - X
+- motion: blink_12
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/08_left_elbow
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - BACK
+  - Y
+- motion: blink_13
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/09_left_hook_right_backfist
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - BACK
+  - CROSS_X_UP
+- motion: blink_14
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/10_left_kick
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - BACK
+  - CROSS_X_DOWN
+- motion: blink_15
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/11_left_knee
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - BACK
+  - CROSS_Y_LEFT
+- motion: blink_16
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/12_left_punch_right_kick
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - RB
+  - BACK
+  - CROSS_Y_RIGHT
+- motion: blink_17
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/13_low_right_kick
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - LB
+  - BACK
+  - A
+- motion: blink_18
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/14_right_arm_slam
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - LB
+  - BACK
+  - B
+- motion: blink_19
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/15_right_elbow
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - LB
+  - BACK
+  - X
+- motion: blink_20
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/18_right_kick
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - LB
+  - BACK
+  - Y
+- motion: blink_21
+  period: 0.005
+  runner:
+  - name: blink_native_tracking_runner
+    enabled: true
+    param_tag: blink_native/motions/19_right_knee
+  manual_transition:
+  - passive
+  - walk
+  auto_transition: walk
+  key:
+  - LB
+  - BACK
+  - CROSS_X_UP

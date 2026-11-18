@@ -40,3 +40,5 @@ _build
 .cache
 build
 .vscode
+/dist/
+/t800_logs/

@@ -1,0 +1,11 @@
+{
+  "checkpoint": 23000,
+  "samples": 64,
+  "flat_onnx_vs_pytorch_max_abs": 1.1444091796875e-05,
+  "mnn_vs_onnx_max_abs": 7.390975952148438e-05,
+  "mnn_vs_pytorch_max_abs": 7.05718994140625e-05,
+  "model_bytes": 34849828,
+  "model_sha256": "e16935bfcbc7e18dae505b894590175068a35cf39cb001d155972513d4ce685f",
+  "source_onnx_sha256": "4931b1aa7c23909d59d59fda8ef13658100454d97cbe869c0b2399eb5ca4caa2",
+  "float32": true
+}

@@ -9,26 +9,26 @@
 
 namespace blink {
 
-struct WalkingPositionBlend {
+struct WalkingDirectReturn {
   std::weak_ptr<const data::DataStore> owner;
   std::chrono::steady_clock::time_point requested_at;
   Eigen::VectorXd preceding_target;
   std::atomic<bool> pending{true};
 };
 
-inline constexpr char kWalkingPositionBlend[] = "blinkmimic.walking_position_blend";
+inline constexpr char kWalkingDirectReturn[] = "blinkmimic.walking_direct_return";
 
-inline void RequestWalkingPositionBlend(const std::shared_ptr<data::DataStore>& owner) {
-  auto handoff = std::make_shared<WalkingPositionBlend>();
+inline void RequestWalkingDirectReturn(const std::shared_ptr<data::DataStore>& owner) {
+  auto handoff = std::make_shared<WalkingDirectReturn>();
   handoff->owner = owner;
   handoff->requested_at = std::chrono::steady_clock::now();
   owner->joint_info.GetCommand(data::JointInfoType::kPosition, handoff->preceding_target);
-  data::VariantStore::GetInstance().SetShared(kWalkingPositionBlend, std::move(handoff));
+  data::VariantStore::GetInstance().SetShared(kWalkingDirectReturn, std::move(handoff));
 }
 
-inline bool TakeWalkingPositionBlend(const std::shared_ptr<data::DataStore>& owner,
+inline bool TakeWalkingDirectReturn(const std::shared_ptr<data::DataStore>& owner,
                                     const Eigen::VectorXd& preceding_target) {
-  auto handoff = data::VariantStore::GetInstance().GetMutable<WalkingPositionBlend>(kWalkingPositionBlend);
+  auto handoff = data::VariantStore::GetInstance().GetMutable<WalkingDirectReturn>(kWalkingDirectReturn);
   if (!handoff || handoff->owner.lock() != owner || !handoff->pending.exchange(false)) {
     return false;
   }

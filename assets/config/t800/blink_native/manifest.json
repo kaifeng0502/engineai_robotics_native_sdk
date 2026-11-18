@@ -1,0 +1,287 @@
+{
+  "schema": "t800_full21_23000_v1",
+  "checkpoint": 23000,
+  "source_checkpoint_sha256": "4f28975f19c436f86ffe56e358a0978aac204cc25f50b391a1fbade296abb9d5",
+  "policy_file": "shared/tracking_policy.mnn",
+  "policy_sha256": "e16935bfcbc7e18dae505b894590175068a35cf39cb001d155972513d4ce685f",
+  "source_onnx_sha256": "4931b1aa7c23909d59d59fda8ef13658100454d97cbe869c0b2399eb5ca4caa2",
+  "excluded": [
+    "05_hook_uppercut",
+    "17_right_hook_left_backfist_final"
+  ],
+  "motions": [
+    {
+      "name": "01_front_block",
+      "label": "前方格挡",
+      "frames": 160,
+      "duration_s": 3.18,
+      "task": "blink_01",
+      "keys": [
+        "RB",
+        "START",
+        "A"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "01_spin_kick_540",
+      "label": "540°旋踢",
+      "frames": 208,
+      "duration_s": 4.14,
+      "task": "blink_02",
+      "keys": [
+        "RB",
+        "START",
+        "B"
+      ],
+      "known_issue": "leg contact remains"
+    },
+    {
+      "name": "02_left_duck",
+      "label": "左闪躲",
+      "frames": 153,
+      "duration_s": 3.04,
+      "task": "blink_03",
+      "keys": [
+        "RB",
+        "START",
+        "X"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "03_right_duck",
+      "label": "右闪躲",
+      "frames": 149,
+      "duration_s": 2.96,
+      "task": "blink_04",
+      "keys": [
+        "RB",
+        "START",
+        "Y"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "03_right_duck_left_kick",
+      "label": "右闪躲接左踢",
+      "frames": 168,
+      "duration_s": 3.34,
+      "task": "blink_05",
+      "keys": [
+        "RB",
+        "START",
+        "CROSS_X_UP"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "04_back_duck",
+      "label": "后闪躲",
+      "frames": 196,
+      "duration_s": 3.9,
+      "task": "blink_06",
+      "keys": [
+        "RB",
+        "START",
+        "CROSS_X_DOWN"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "04_left_duck_right_kick",
+      "label": "左闪躲接右踢",
+      "frames": 212,
+      "duration_s": 4.22,
+      "task": "blink_07",
+      "keys": [
+        "RB",
+        "START",
+        "CROSS_Y_LEFT"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "06_left_arm_slam",
+      "label": "左臂下砸",
+      "frames": 124,
+      "duration_s": 2.46,
+      "task": "blink_08",
+      "keys": [
+        "RB",
+        "START",
+        "CROSS_Y_RIGHT"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "06_right_kick_knee",
+      "label": "右踢接膝击",
+      "frames": 136,
+      "duration_s": 2.7,
+      "task": "blink_09",
+      "keys": [
+        "RB",
+        "BACK",
+        "A"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "07_left_block",
+      "label": "左侧格挡",
+      "frames": 125,
+      "duration_s": 2.48,
+      "task": "blink_10",
+      "keys": [
+        "RB",
+        "BACK",
+        "B"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "07_left_side_kick",
+      "label": "左侧踢",
+      "frames": 128,
+      "duration_s": 2.54,
+      "task": "blink_11",
+      "keys": [
+        "RB",
+        "BACK",
+        "X"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "08_left_elbow",
+      "label": "左肘击",
+      "frames": 119,
+      "duration_s": 2.36,
+      "task": "blink_12",
+      "keys": [
+        "RB",
+        "BACK",
+        "Y"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "09_left_hook_right_backfist",
+      "label": "左勾拳接右反手拳",
+      "frames": 162,
+      "duration_s": 3.22,
+      "task": "blink_13",
+      "keys": [
+        "RB",
+        "BACK",
+        "CROSS_X_UP"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "10_left_kick",
+      "label": "左踢",
+      "frames": 163,
+      "duration_s": 3.24,
+      "task": "blink_14",
+      "keys": [
+        "RB",
+        "BACK",
+        "CROSS_X_DOWN"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "11_left_knee",
+      "label": "左膝击",
+      "frames": 144,
+      "duration_s": 2.86,
+      "task": "blink_15",
+      "keys": [
+        "RB",
+        "BACK",
+        "CROSS_Y_LEFT"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "12_left_punch_right_kick",
+      "label": "左拳接右踢",
+      "frames": 203,
+      "duration_s": 4.04,
+      "task": "blink_16",
+      "keys": [
+        "RB",
+        "BACK",
+        "CROSS_Y_RIGHT"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "13_low_right_kick",
+      "label": "右低踢",
+      "frames": 174,
+      "duration_s": 3.46,
+      "task": "blink_17",
+      "keys": [
+        "LB",
+        "BACK",
+        "A"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "14_right_arm_slam",
+      "label": "右臂下砸",
+      "frames": 140,
+      "duration_s": 2.7800000000000002,
+      "task": "blink_18",
+      "keys": [
+        "LB",
+        "BACK",
+        "B"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "15_right_elbow",
+      "label": "右肘击",
+      "frames": 119,
+      "duration_s": 2.36,
+      "task": "blink_19",
+      "keys": [
+        "LB",
+        "BACK",
+        "X"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "18_right_kick",
+      "label": "右踢",
+      "frames": 133,
+      "duration_s": 2.64,
+      "task": "blink_20",
+      "keys": [
+        "LB",
+        "BACK",
+        "Y"
+      ],
+      "known_issue": null
+    },
+    {
+      "name": "19_right_knee",
+      "label": "右膝击",
+      "frames": 136,
+      "duration_s": 2.7,
+      "task": "blink_21",
+      "keys": [
+        "LB",
+        "BACK",
+        "CROSS_X_UP"
+      ],
+      "known_issue": null
+    }
+  ]
+}

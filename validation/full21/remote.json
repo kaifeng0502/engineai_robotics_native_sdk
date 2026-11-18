@@ -1,0 +1,7 @@
+{
+  "pass": true,
+  "buttons": 21,
+  "messages": 231,
+  "full_combo_and_release_checked": true,
+  "transport": "in-memory capture; no robot commands sent"
+}

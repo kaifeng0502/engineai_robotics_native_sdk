@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "motions": 21,
+  "source_frames": 3252,
+  "reference_arrays_exact": true,
+  "unique_actor_files": 1,
+  "key_bindings_match_and_unique": true,
+  "mujoco_xml_load": true,
+  "physical_model_matches_validation": true,
+  "physics_timestep_s": 0.001
+}

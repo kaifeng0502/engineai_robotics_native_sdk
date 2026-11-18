@@ -1,3 +1,5 @@
+> 本分支交付：**T800 21 个完整动作，共用 checkpoint 23000 模型**。请先阅读 [交付说明、编译、遥控映射与验证结果](docs/BLINK_FULL21.md)。
+
 # EngineAI Native SDK: Native Control Framework for Humanoid Robots
 
 [中文](README_CN.md) | English

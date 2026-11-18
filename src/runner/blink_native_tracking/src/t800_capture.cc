@@ -36,7 +36,7 @@ struct Recorder {
   nlohmann::json meta={{"schema","t800_blink_capture_v1"},{"pid",getpid()},{"started_wall_ns",started},
     {"byte_order","little"},{"policy_record_size",sizeof(PolicyRecord)},{"sensor_record_size",sizeof(SensorRecord)},
     {"motor_record_size",sizeof(MotorRecord)},{"event_record_size",sizeof(EventRecord)},
-    {"policy_hz",50},{"execution_hz",200},{"frame_observation_dim",87},{"model_input_dim",1520},
+    {"policy_hz",50},{"execution_hz",200},{"checkpoint",23000},{"delivery","full21_direct"},{"frame_observation_dim",87},{"model_input_dim",1520},
     {"domain",domain?domain:"sdk_view"},
     {"feedback_provenance","official_sdk_cache"},
     {"motor_sdk_view_is_not_bus_send_confirmation",true},{"missing_extra_motor_fields","NaN plus cleared validity bit"},

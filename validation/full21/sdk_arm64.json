@@ -1,0 +1,162 @@
+{
+  "actor_steps": 3231,
+  "architecture": "aarch64",
+  "completion_and_invalid_state_checks": true,
+  "input_max_abs": 0.00015103816986083984,
+  "motion_count": 21,
+  "pass": true,
+  "raw_max_abs": 0.00015103816986083984,
+  "real_sdk_runners": true,
+  "rows": [
+    {
+      "actor_ticks": 159,
+      "input_max_abs": 7.2479248046875e-05,
+      "name": "01_front_block",
+      "raw_max_abs": 7.2479248046875e-05,
+      "return_target_max_abs_rad": 1.7434358596801758e-05
+    },
+    {
+      "actor_ticks": 207,
+      "input_max_abs": 9.441375732421875e-05,
+      "name": "01_spin_kick_540",
+      "raw_max_abs": 9.441375732421875e-05,
+      "return_target_max_abs_rad": 1.529604196548462e-05
+    },
+    {
+      "actor_ticks": 152,
+      "input_max_abs": 0.00010538101196289062,
+      "name": "02_left_duck",
+      "raw_max_abs": 0.00010538101196289062,
+      "return_target_max_abs_rad": 1.6927719116210938e-05
+    },
+    {
+      "actor_ticks": 148,
+      "input_max_abs": 0.00010967254638671875,
+      "name": "03_right_duck",
+      "raw_max_abs": 0.00010967254638671875,
+      "return_target_max_abs_rad": 1.1771917343139648e-05
+    },
+    {
+      "actor_ticks": 167,
+      "input_max_abs": 0.000125885009765625,
+      "name": "03_right_duck_left_kick",
+      "raw_max_abs": 0.000125885009765625,
+      "return_target_max_abs_rad": 2.73287296295166e-05
+    },
+    {
+      "actor_ticks": 195,
+      "input_max_abs": 0.00011038780212402344,
+      "name": "04_back_duck",
+      "raw_max_abs": 0.00011038780212402344,
+      "return_target_max_abs_rad": 1.3455748558044434e-05
+    },
+    {
+      "actor_ticks": 211,
+      "input_max_abs": 0.00010251998901367188,
+      "name": "04_left_duck_right_kick",
+      "raw_max_abs": 0.00010251998901367188,
+      "return_target_max_abs_rad": 1.7043203115463257e-05
+    },
+    {
+      "actor_ticks": 123,
+      "input_max_abs": 9.202957153320312e-05,
+      "name": "06_left_arm_slam",
+      "raw_max_abs": 9.202957153320312e-05,
+      "return_target_max_abs_rad": 2.0839273929595947e-05
+    },
+    {
+      "actor_ticks": 135,
+      "input_max_abs": 9.250640869140625e-05,
+      "name": "06_right_kick_knee",
+      "raw_max_abs": 9.250640869140625e-05,
+      "return_target_max_abs_rad": 1.1652708053588867e-05
+    },
+    {
+      "actor_ticks": 124,
+      "input_max_abs": 0.00014162063598632812,
+      "name": "07_left_block",
+      "raw_max_abs": 0.00014162063598632812,
+      "return_target_max_abs_rad": 4.565715789794922e-05
+    },
+    {
+      "actor_ticks": 127,
+      "input_max_abs": 8.296966552734375e-05,
+      "name": "07_left_side_kick",
+      "raw_max_abs": 8.296966552734375e-05,
+      "return_target_max_abs_rad": 9.441375732416324e-06
+    },
+    {
+      "actor_ticks": 118,
+      "input_max_abs": 9.965896606445312e-05,
+      "name": "08_left_elbow",
+      "raw_max_abs": 9.965896606445312e-05,
+      "return_target_max_abs_rad": 2.3484230041503906e-05
+    },
+    {
+      "actor_ticks": 161,
+      "input_max_abs": 0.00012302398681640625,
+      "name": "09_left_hook_right_backfist",
+      "raw_max_abs": 0.00012302398681640625,
+      "return_target_max_abs_rad": 1.901388168334961e-05
+    },
+    {
+      "actor_ticks": 162,
+      "input_max_abs": 0.00012683868408203125,
+      "name": "10_left_kick",
+      "raw_max_abs": 0.00012683868408203125,
+      "return_target_max_abs_rad": 2.5674700736999512e-05
+    },
+    {
+      "actor_ticks": 143,
+      "input_max_abs": 8.869171142578125e-05,
+      "name": "11_left_knee",
+      "raw_max_abs": 8.869171142578125e-05,
+      "return_target_max_abs_rad": 2.2172927856445312e-05
+    },
+    {
+      "actor_ticks": 202,
+      "input_max_abs": 0.00015103816986083984,
+      "name": "12_left_punch_right_kick",
+      "raw_max_abs": 0.00015103816986083984,
+      "return_target_max_abs_rad": 2.9295682907104492e-05
+    },
+    {
+      "actor_ticks": 173,
+      "input_max_abs": 0.00012803077697753906,
+      "name": "13_low_right_kick",
+      "raw_max_abs": 0.00012803077697753906,
+      "return_target_max_abs_rad": 3.3855438232421875e-05
+    },
+    {
+      "actor_ticks": 139,
+      "input_max_abs": 8.487701416015625e-05,
+      "name": "14_right_arm_slam",
+      "raw_max_abs": 8.487701416015625e-05,
+      "return_target_max_abs_rad": 1.6987323760986328e-05
+    },
+    {
+      "actor_ticks": 118,
+      "input_max_abs": 9.489059448242188e-05,
+      "name": "15_right_elbow",
+      "raw_max_abs": 9.489059448242188e-05,
+      "return_target_max_abs_rad": 2.3126602172851562e-05
+    },
+    {
+      "actor_ticks": 132,
+      "input_max_abs": 0.0001125335693359375,
+      "name": "18_right_kick",
+      "raw_max_abs": 0.0001125335693359375,
+      "return_target_max_abs_rad": 2.181529998779297e-05
+    },
+    {
+      "actor_ticks": 135,
+      "input_max_abs": 0.0001468658447265625,
+      "name": "19_right_knee",
+      "raw_max_abs": 0.0001468658447265625,
+      "return_target_max_abs_rad": 1.76355242729187e-05
+    }
+  ],
+  "shared_actor_instances": 1,
+  "target_max_abs_rad": 6.401538848876953e-05,
+  "walking_target_max_abs_rad": 4.565715789794922e-05
+}

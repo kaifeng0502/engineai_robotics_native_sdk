@@ -122,9 +122,12 @@ bool RlWalkingExamplePm01Runner::Enter() {
   // --- Step 2: Load the MLP policy network ---
   // policy_file is the model file path relative to the config directory (.mnn
   // format). MNNModel wraps the MNN inference framework for forward inference.
-  mlp_net_ = std::make_unique<math::MNNModel>(
-      common::PathJoin(common::GlobalPathManager::GetInstance().GetConfigPath(),
-                       param_->policy_file));
+  const auto policy_path = common::PathJoin(
+      common::GlobalPathManager::GetInstance().GetConfigPath(), param_->policy_file);
+  if (!mlp_net_ || loaded_policy_path_ != policy_path) {
+    mlp_net_ = std::make_unique<math::MNNModel>(policy_path);
+    loaded_policy_path_ = policy_path;
+  }
 
   // --- Step 3: Initialize observation and action buffers ---
   // Observation matrix dimensions: [num_observations x num_include_obs_steps]
@@ -209,7 +212,10 @@ bool RlWalkingExamplePm01Runner::Enter() {
   GetMutableOutput().Reset();
 
   initial_joint_q_ = last_joint_q_cmd;
-  blend_all_return_positions_ = blink::TakeWalkingPositionBlend(data_store_, initial_joint_q_);
+  blend_all_return_positions_ = false;
+  if (blink::TakeWalkingDirectReturn(data_store_, initial_joint_q_)) {
+    enable_startup_transition_ = false;
+  }
 
   return true;
 }

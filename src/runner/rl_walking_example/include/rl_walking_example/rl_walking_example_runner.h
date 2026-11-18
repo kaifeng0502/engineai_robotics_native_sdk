@@ -43,6 +43,7 @@ private:
   bool enable_startup_transition_ = false;
 
   std::unique_ptr<math::MNNModel> mlp_net_;
+  std::string loaded_policy_path_;
   Eigen::MatrixXd mlp_net_observation_;
   Eigen::VectorXd mlp_net_action_;
 
