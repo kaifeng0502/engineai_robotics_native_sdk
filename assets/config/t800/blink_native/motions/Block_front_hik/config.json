@@ -2,7 +2,7 @@
   "schema": "t800_blinkmimic_sdk_v1",
   "policy_type": "blinkmimic87",
   "clip": "Block_front_hik",
-  "policy_file": "policy.mnn",
+  "policy_file": "../../shared/tracking_policy.mnn",
   "motion_file": "motion.npz",
   "policy_sha256": "d8f8f163a83e41ce7a80b62c14331c3780879980a34396e2c0e31834dde3cff5",
   "motion_sha256": "72964cfb4ebe075a4b772c41735c26e81c2e152af24cd1e37c8587b4aa8ff550",

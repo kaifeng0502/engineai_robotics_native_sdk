@@ -2,7 +2,7 @@
   "schema": "t800_blinkmimic_sdk_v1",
   "policy_type": "blinkmimic87",
   "clip": "Right_leg_to_Kick_Knee_hik",
-  "policy_file": "policy.mnn",
+  "policy_file": "../../shared/tracking_policy.mnn",
   "motion_file": "motion.npz",
   "policy_sha256": "d8f8f163a83e41ce7a80b62c14331c3780879980a34396e2c0e31834dde3cff5",
   "motion_sha256": "ee36d09b14e5813a268161eb795b60dd303a26f128962d5e80f6fef20b2d7f9d",
