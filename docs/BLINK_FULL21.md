@@ -2,6 +2,8 @@
 
 本交付基于 `feat/blink-direct-start`（基线提交 `d4a57c26d6ef4e8150ea189ae63559ea35361157`），交付分支为 `feat/blink-full21-20261118`。
 
+**本次只交付源码分支，以及运行所需的单模型和动作参考配置；不发布编译部署包或 Release。部署方评审、合并到自己的工程后，自行编译。** 下文的打包命令仅供部署方在本地按需使用。
+
 ## 定版范围
 
 - 21 个动作只使用一个动作模型：`assets/config/t800/blink_native/shared/tracking_policy.mnn`，FP32，34,849,828 字节。21 个动作 runner 共享同一个 MNN 推理实例。
@@ -25,9 +27,11 @@
 
 ARM64 测试使用真实 C++ SDK 的状态读取、观测历史、模型推理、任务完成及行走 runner，输入为仿真记录；并非完整机器人通信链路的闭环测试。尚未在实机执行。SDK runner 发出原始虚拟关节目标；MuJoCo 在每个物理步执行 PD 并按 XML 的执行器范围限矩。部署方需核对实机驱动的限矩、并联踝转换与 PD 参数（包含上肢 Kd=0.3）是否与配置一致。不要把旧版 50 Hz 的目标限矩改写或额外补偿重新加入此模型输入/输出链路。
 
-## 编译与打包
+## 合并、编译与可选本地打包
 
-在源码仓库根目录：
+部署方以现有 `feat/blink-direct-start` 工程为基线，评审本分支后合并；本次未改动主分支。合并内容包括 C++ runner、单模型与 21 份参考、任务/遥控配置及验证工具。
+
+在合并后的源码仓库根目录：
 
 ```bash
 bash build.sh -a aarch64 -r humble -t release -j 4
@@ -39,7 +43,7 @@ python3 tools/package_full21.py
 
 本地打包工具只产生 `dist/T800_full21_23000_20261118_arm64.tar.gz`、JSON 清单和 SHA256 文件；不连接机器人。压缩包包含 ARM64 编译产物、运行依赖、T800 资源、21 个动作、遥控器、指标工具与验证报告；不包含训练目录。本次 ARM64 压缩包约 **133 MB**，解压普通文件合计约 **254.7 MB**（十进制；文件系统占用会因符号链接、块大小而不同）。精确值以归档同名 JSON 的 `archive_bytes` 和 `unpacked_regular_file_bytes` 为准。
 
-## 部署方使用
+## 部署方自行构建后的使用
 
 1. 解压交付包，在包根目录执行 `sha256sum -c SHA256SUMS`。
 2. 包面向 ARM64 Linux / ROS 2 Humble；仍需要部署方机器上的 ROS 和 EngineAI 硬件驱动。包的 `assets/config/t800/mode.yaml` 默认保持 `active_mode: sim`。实机模式由部署方按其已验证的硬件部署流程配置。
