@@ -1,4 +1,3 @@
-# 21 complete NPZ motions, one checkpoint-23000 actor. See docs/BLINK_FULL21.md.
 cpu:
   number: 3
   priority: 10
@@ -36,6 +35,29 @@ tasks:
   - passive
   - walk
   - dance
+  - tracking_01
+  - tracking_02
+  - tracking_03
+  - tracking_04
+  - tracking_05
+  - tracking_06
+  - tracking_07
+  - tracking_08
+  - tracking_09
+  - tracking_10
+  - tracking_11
+  - tracking_12
+  - tracking_13
+  - tracking_14
+  - tracking_15
+  - tracking_16
+  - tracking_17
+  - tracking_18
+  - tracking_19
+  - tracking_20
+  - tracking_21
+  - tracking_22
+  - tracking_23
   key:
   - LB
   - A
@@ -49,28 +71,6 @@ tasks:
   - passive
   - pd_stand
   - stance_to_supine
-  - dance
-  - blink_01
-  - blink_02
-  - blink_03
-  - blink_04
-  - blink_05
-  - blink_06
-  - blink_07
-  - blink_08
-  - blink_09
-  - blink_10
-  - blink_11
-  - blink_12
-  - blink_13
-  - blink_14
-  - blink_15
-  - blink_16
-  - blink_17
-  - blink_18
-  - blink_19
-  - blink_20
-  - blink_21
   key:
   - LB
   - B
@@ -83,7 +83,7 @@ tasks:
   - passive
   - pd_stand
   - walk
-  auto_transition: walk
+  auto_transition: pd_stand
   key:
   - RB
   - B
@@ -112,297 +112,325 @@ tasks:
   key:
   - START
   - CROSS_X_DOWN
-- motion: blink_01
-  period: 0.005
+- motion: tracking_01
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/01_front_block
+    param_tag: official134_12000_motion_01
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - START
   - A
-- motion: blink_02
-  period: 0.005
+- motion: tracking_02
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/01_spin_kick_540
+    param_tag: official134_12000_motion_02
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - START
   - B
-- motion: blink_03
-  period: 0.005
+- motion: tracking_03
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/02_left_duck
+    param_tag: official134_12000_motion_03
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - START
   - X
-- motion: blink_04
-  period: 0.005
+- motion: tracking_04
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/03_right_duck
+    param_tag: official134_12000_motion_04
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - START
   - Y
-- motion: blink_05
-  period: 0.005
+- motion: tracking_05
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/03_right_duck_left_kick
+    param_tag: official134_12000_motion_05
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - START
   - CROSS_X_UP
-- motion: blink_06
-  period: 0.005
+- motion: tracking_06
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/04_back_duck
+    param_tag: official134_12000_motion_06
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - START
   - CROSS_X_DOWN
-- motion: blink_07
-  period: 0.005
+- motion: tracking_07
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/04_left_duck_right_kick
+    param_tag: official134_12000_motion_07
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - START
   - CROSS_Y_LEFT
-- motion: blink_08
-  period: 0.005
+- motion: tracking_08
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/06_left_arm_slam
+    param_tag: official134_12000_motion_08
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - START
   - CROSS_Y_RIGHT
-- motion: blink_09
-  period: 0.005
+- motion: tracking_09
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/06_right_kick_knee
+    param_tag: official134_12000_motion_09
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - BACK
   - A
-- motion: blink_10
-  period: 0.005
+- motion: tracking_10
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/07_left_block
+    param_tag: official134_12000_motion_10
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - BACK
   - B
-- motion: blink_11
-  period: 0.005
+- motion: tracking_11
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/07_left_side_kick
+    param_tag: official134_12000_motion_11
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - BACK
   - X
-- motion: blink_12
-  period: 0.005
+- motion: tracking_12
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/08_left_elbow
+    param_tag: official134_12000_motion_12
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - BACK
   - Y
-- motion: blink_13
-  period: 0.005
+- motion: tracking_13
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/09_left_hook_right_backfist
+    param_tag: official134_12000_motion_13
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - BACK
   - CROSS_X_UP
-- motion: blink_14
-  period: 0.005
+- motion: tracking_14
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/10_left_kick
+    param_tag: official134_12000_motion_14
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - BACK
   - CROSS_X_DOWN
-- motion: blink_15
-  period: 0.005
+- motion: tracking_15
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/11_left_knee
+    param_tag: official134_12000_motion_15
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - BACK
   - CROSS_Y_LEFT
-- motion: blink_16
-  period: 0.005
+- motion: tracking_16
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/12_left_punch_right_kick
+    param_tag: official134_12000_motion_16
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - RB
   - BACK
   - CROSS_Y_RIGHT
-- motion: blink_17
-  period: 0.005
+- motion: tracking_17
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/13_low_right_kick
+    param_tag: official134_12000_motion_17
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - LB
-  - BACK
+  - START
   - A
-- motion: blink_18
-  period: 0.005
+- motion: tracking_18
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/14_right_arm_slam
+    param_tag: official134_12000_motion_18
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - LB
-  - BACK
+  - START
   - B
-- motion: blink_19
-  period: 0.005
+- motion: tracking_19
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/15_right_elbow
+    param_tag: official134_12000_motion_19
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - LB
-  - BACK
+  - START
   - X
-- motion: blink_20
-  period: 0.005
+- motion: tracking_20
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/18_right_kick
+    param_tag: official134_12000_motion_20
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - LB
-  - BACK
+  - START
   - Y
-- motion: blink_21
-  period: 0.005
+- motion: tracking_21
+  period: 0.02
   runner:
-  - name: blink_native_tracking_runner
+  - name: rl_dance_example_runner
     enabled: true
-    param_tag: blink_native/motions/19_right_knee
+    param_tag: official134_12000_motion_21
   manual_transition:
   - passive
-  - walk
-  auto_transition: walk
+  - pd_stand
+  auto_transition: pd_stand
   key:
   - LB
-  - BACK
+  - START
   - CROSS_X_UP
+- motion: tracking_22
+  period: 0.02
+  runner:
+  - name: rl_dance_example_runner
+    enabled: true
+    param_tag: official134_12000_motion_22
+  manual_transition:
+  - passive
+  - pd_stand
+  auto_transition: pd_stand
+  key:
+  - LB
+  - START
+  - CROSS_X_DOWN
+- motion: tracking_23
+  period: 0.02
+  runner:
+  - name: rl_dance_example_runner
+    enabled: true
+    param_tag: official134_12000_motion_23
+  manual_transition:
+  - passive
+  - pd_stand
+  auto_transition: pd_stand
+  key:
+  - LB
+  - START
+  - CROSS_Y_LEFT

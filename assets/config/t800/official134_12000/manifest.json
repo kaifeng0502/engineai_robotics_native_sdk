@@ -1,0 +1,414 @@
+{
+  "package": "T800_official134_012000_source_T800only_20261119",
+  "checkpoint_iteration": 12000,
+  "checkpoint_sha256": "4dbbec33f1eb0efd76d3ab8997a173cd8aa07d21cf31d8c2fadebfab3423f044",
+  "sdk_commit": "c8a23eee6adf1276cabcab27219f8d16db104a39",
+  "rl_lab_commit": "c53f7ec614e34f1ea514cefb935894082f3d4c2a",
+  "actor_input_dim": 134,
+  "history_lengths": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "extra_future_input": false,
+  "output_dim": 25,
+  "normalization_included": true,
+  "policy_frequency_hz": 50,
+  "entry_s": 0.5,
+  "return_to_default_stance_s": 1.0,
+  "stable_hold_s": 1.0,
+  "training_ankle_velocity_noise_half_width_rad_s": 3.0,
+  "training_response_delay_ms": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "default_mode": "sim",
+  "stance": "official policy default pose;start actions from pd_stand",
+  "tracking_policy_model_count": 1,
+  "mnn_sha256": "40b70a519a01fbc05027a3624ffb3e47d035b40316345d5023d7deda3a81fd75",
+  "source_code": "official SDK C++ runner/registry unchanged;task,mode,policy and stand-pose configuration customized",
+  "unused_missing_baseline_scope_removed": [
+    {
+      "mode": "robot",
+      "tag": "stand_up",
+      "scope": "multiple_motion_plan/default_stand_up"
+    }
+  ],
+  "native_sdk_build_verified": false,
+  "hardware_verified": false,
+  "motions": [
+    {
+      "index": 1,
+      "motion": "01_front_block",
+      "state": "tracking_01",
+      "tag": "official134_12000_motion_01",
+      "scope": "official134_12000/motions/01_front_block/default",
+      "key": [
+        "RB",
+        "START",
+        "A"
+      ],
+      "frames": 285,
+      "original_frames": 160,
+      "original_npz_sha256": "183ec2dc681432a003a5ea68ac131a60af0385b3f6048d1d95c1e44b64834eb3",
+      "trajectory_sha256": "6286191676620120d3f8159705e2e4dd443e936bb310218cdf514a70cafc652c"
+    },
+    {
+      "index": 2,
+      "motion": "01_spin_kick_540",
+      "state": "tracking_02",
+      "tag": "official134_12000_motion_02",
+      "scope": "official134_12000/motions/01_spin_kick_540/default",
+      "key": [
+        "RB",
+        "START",
+        "B"
+      ],
+      "frames": 333,
+      "original_frames": 208,
+      "original_npz_sha256": "8b0670b58900192487481268e2fa45b879ce27147637b6e4d489fe412879c6aa",
+      "trajectory_sha256": "54a9a45a0d51d449b638d6ddb0722d11b7d3784cd9507ce23e413263a38173c7"
+    },
+    {
+      "index": 3,
+      "motion": "02_left_duck",
+      "state": "tracking_03",
+      "tag": "official134_12000_motion_03",
+      "scope": "official134_12000/motions/02_left_duck/default",
+      "key": [
+        "RB",
+        "START",
+        "X"
+      ],
+      "frames": 278,
+      "original_frames": 153,
+      "original_npz_sha256": "d28c0f113c1addec590da96f93dc2f7db2a89b11ade99165b4cf27735efe4a21",
+      "trajectory_sha256": "aa4197672daac6c80ebae156821b50308f4dabd9a5143a86a951ac38ffec579e"
+    },
+    {
+      "index": 4,
+      "motion": "03_right_duck",
+      "state": "tracking_04",
+      "tag": "official134_12000_motion_04",
+      "scope": "official134_12000/motions/03_right_duck/default",
+      "key": [
+        "RB",
+        "START",
+        "Y"
+      ],
+      "frames": 274,
+      "original_frames": 149,
+      "original_npz_sha256": "e1e018ccf09290cd5dd22c47b23efa85489c10e95fcbf0e74c5d8b92d974092b",
+      "trajectory_sha256": "2f01ebe82e840ff793d3bb9287152f09409739bec7ced1f4aa40194179b9d805"
+    },
+    {
+      "index": 5,
+      "motion": "03_right_duck_left_kick",
+      "state": "tracking_05",
+      "tag": "official134_12000_motion_05",
+      "scope": "official134_12000/motions/03_right_duck_left_kick/default",
+      "key": [
+        "RB",
+        "START",
+        "CROSS_X_UP"
+      ],
+      "frames": 293,
+      "original_frames": 168,
+      "original_npz_sha256": "564ec5abcfdb894ff8119644eab665e51a7339e3c94584484010ee4c21bf7da4",
+      "trajectory_sha256": "d5d57042dd86001f76c589fac7ddb5739159969373c4cc124dd3c64e853f7949"
+    },
+    {
+      "index": 6,
+      "motion": "04_back_duck",
+      "state": "tracking_06",
+      "tag": "official134_12000_motion_06",
+      "scope": "official134_12000/motions/04_back_duck/default",
+      "key": [
+        "RB",
+        "START",
+        "CROSS_X_DOWN"
+      ],
+      "frames": 321,
+      "original_frames": 196,
+      "original_npz_sha256": "96dde8574cdd1d611eb1bbdca9bb2b3246d38a960173676a04f0e490a37a028c",
+      "trajectory_sha256": "4ddc6be752264edc07fecbcceb15e618169f907f7a9c70e8f8433f9c61caf260"
+    },
+    {
+      "index": 7,
+      "motion": "04_left_duck_right_kick",
+      "state": "tracking_07",
+      "tag": "official134_12000_motion_07",
+      "scope": "official134_12000/motions/04_left_duck_right_kick/default",
+      "key": [
+        "RB",
+        "START",
+        "CROSS_Y_LEFT"
+      ],
+      "frames": 337,
+      "original_frames": 212,
+      "original_npz_sha256": "f4f620c66495dfd2656b3e5118470a79c326470978cb1fcc2a4a2e7e5d589ae0",
+      "trajectory_sha256": "3b71e4b7b770979577565041c065878fa9e462e705a45eaf3d58820fa7a8d25a"
+    },
+    {
+      "index": 8,
+      "motion": "05_hook_uppercut",
+      "state": "tracking_08",
+      "tag": "official134_12000_motion_08",
+      "scope": "official134_12000/motions/05_hook_uppercut/default",
+      "key": [
+        "RB",
+        "START",
+        "CROSS_Y_RIGHT"
+      ],
+      "frames": 300,
+      "original_frames": 175,
+      "original_npz_sha256": "d18d88cf4af708f15eab71868326dbf60ec6bae6a70c2c355afb8fb2cd7cda8a",
+      "trajectory_sha256": "9ca84466775a16048ab253444003878425666c93a024c976e51ecc65021493ab"
+    },
+    {
+      "index": 9,
+      "motion": "06_left_arm_slam",
+      "state": "tracking_09",
+      "tag": "official134_12000_motion_09",
+      "scope": "official134_12000/motions/06_left_arm_slam/default",
+      "key": [
+        "RB",
+        "BACK",
+        "A"
+      ],
+      "frames": 249,
+      "original_frames": 124,
+      "original_npz_sha256": "1ac5eaddd0baa6f9cabf3acb9747fd0594ae4ba988168f2134b36e7f62437edd",
+      "trajectory_sha256": "8f3968cbfda7b623718195c0445764704f6645238579c94f32321edc791b7139"
+    },
+    {
+      "index": 10,
+      "motion": "06_right_kick_knee",
+      "state": "tracking_10",
+      "tag": "official134_12000_motion_10",
+      "scope": "official134_12000/motions/06_right_kick_knee/default",
+      "key": [
+        "RB",
+        "BACK",
+        "B"
+      ],
+      "frames": 261,
+      "original_frames": 136,
+      "original_npz_sha256": "b004b67cf82695b426a2b53a7eebf3ce097219c6c14bab06e872d462d27912f4",
+      "trajectory_sha256": "6bbba8380a99dd4abafa1fab85463788f778360f58a82dced0d3581f6d7075c4"
+    },
+    {
+      "index": 11,
+      "motion": "07_left_block",
+      "state": "tracking_11",
+      "tag": "official134_12000_motion_11",
+      "scope": "official134_12000/motions/07_left_block/default",
+      "key": [
+        "RB",
+        "BACK",
+        "X"
+      ],
+      "frames": 250,
+      "original_frames": 125,
+      "original_npz_sha256": "6103641efc4cfd45f791a5b64cc51d4f9d70bb67c7537ece2fba7c399295bafd",
+      "trajectory_sha256": "2c769a7d58c252b4750e1615535ca0e5c0b5ca6c1ddbc5f8c052cc28d4fc5364"
+    },
+    {
+      "index": 12,
+      "motion": "07_left_side_kick",
+      "state": "tracking_12",
+      "tag": "official134_12000_motion_12",
+      "scope": "official134_12000/motions/07_left_side_kick/default",
+      "key": [
+        "RB",
+        "BACK",
+        "Y"
+      ],
+      "frames": 253,
+      "original_frames": 128,
+      "original_npz_sha256": "ddda9f021e26777f4cfc6772541674fc8ab98d6862563800cb925e55ad657457",
+      "trajectory_sha256": "67af57698304da2514f7b0acfb9082b4d2ddab1d6d644b38ee4b1d291414361c"
+    },
+    {
+      "index": 13,
+      "motion": "08_left_elbow",
+      "state": "tracking_13",
+      "tag": "official134_12000_motion_13",
+      "scope": "official134_12000/motions/08_left_elbow/default",
+      "key": [
+        "RB",
+        "BACK",
+        "CROSS_X_UP"
+      ],
+      "frames": 244,
+      "original_frames": 119,
+      "original_npz_sha256": "13901b5ad7fc0d1ae3a975555b91ba2eb91237570ab718dfe02b779f85a71452",
+      "trajectory_sha256": "e7aefeea4fe2abb884420d04036b02bed2056b918011d2e9e4ba83bcef004680"
+    },
+    {
+      "index": 14,
+      "motion": "09_left_hook_right_backfist",
+      "state": "tracking_14",
+      "tag": "official134_12000_motion_14",
+      "scope": "official134_12000/motions/09_left_hook_right_backfist/default",
+      "key": [
+        "RB",
+        "BACK",
+        "CROSS_X_DOWN"
+      ],
+      "frames": 287,
+      "original_frames": 162,
+      "original_npz_sha256": "8f983df7169b0ba7d6743b070a840e4c671505be52dd6a7e08187739c1372e47",
+      "trajectory_sha256": "eaa24fc175e43c080950daf35f640cae7a812179d596cbb9215d40ee43f566ca"
+    },
+    {
+      "index": 15,
+      "motion": "10_left_kick",
+      "state": "tracking_15",
+      "tag": "official134_12000_motion_15",
+      "scope": "official134_12000/motions/10_left_kick/default",
+      "key": [
+        "RB",
+        "BACK",
+        "CROSS_Y_LEFT"
+      ],
+      "frames": 288,
+      "original_frames": 163,
+      "original_npz_sha256": "09e6847183b1830731acb25d776162ebf24749e01a51133f83a6defacee41755",
+      "trajectory_sha256": "0711dcec7f5319cd2104d753c50ed35cf7b07a56ea4ee439c95786ec46bc281a"
+    },
+    {
+      "index": 16,
+      "motion": "11_left_knee",
+      "state": "tracking_16",
+      "tag": "official134_12000_motion_16",
+      "scope": "official134_12000/motions/11_left_knee/default",
+      "key": [
+        "RB",
+        "BACK",
+        "CROSS_Y_RIGHT"
+      ],
+      "frames": 269,
+      "original_frames": 144,
+      "original_npz_sha256": "d14cd0ac0379956e8d3a9e98d14732d742d637ae509a787c742833e2aa928ee1",
+      "trajectory_sha256": "87fae84097820097c443733bfc65957dd4248eb9ff2b0a49b4e5a0c604542b2a"
+    },
+    {
+      "index": 17,
+      "motion": "12_left_punch_right_kick",
+      "state": "tracking_17",
+      "tag": "official134_12000_motion_17",
+      "scope": "official134_12000/motions/12_left_punch_right_kick/default",
+      "key": [
+        "LB",
+        "START",
+        "A"
+      ],
+      "frames": 328,
+      "original_frames": 203,
+      "original_npz_sha256": "41e991ec7db029bab6ac9228b551868384ecdaebdd039434fbd6ae49d3338589",
+      "trajectory_sha256": "6bacc4c99ce7f961c6a4aa4dd7b6e42e72c1e1c4a9b8eecc253c9921f9ebda0e"
+    },
+    {
+      "index": 18,
+      "motion": "13_low_right_kick",
+      "state": "tracking_18",
+      "tag": "official134_12000_motion_18",
+      "scope": "official134_12000/motions/13_low_right_kick/default",
+      "key": [
+        "LB",
+        "START",
+        "B"
+      ],
+      "frames": 299,
+      "original_frames": 174,
+      "original_npz_sha256": "ee3a91399e88cdc55890ba72dff8466bbd9aaef2bf2e454d55d53c97aff4d77f",
+      "trajectory_sha256": "77ef219c713118d15948945e9c87d5d3e4b0dbe63e14ad9d9558b6ba8a021beb"
+    },
+    {
+      "index": 19,
+      "motion": "14_right_arm_slam",
+      "state": "tracking_19",
+      "tag": "official134_12000_motion_19",
+      "scope": "official134_12000/motions/14_right_arm_slam/default",
+      "key": [
+        "LB",
+        "START",
+        "X"
+      ],
+      "frames": 265,
+      "original_frames": 140,
+      "original_npz_sha256": "1ed4b84a38b7fdfd791af636f969d12d7e0ed6f98e37fd71710cadf7623b8dd4",
+      "trajectory_sha256": "1a56537518a71861aa3900de5e68e33a7d54fed517e581c749eb76adc930d49b"
+    },
+    {
+      "index": 20,
+      "motion": "15_right_elbow",
+      "state": "tracking_20",
+      "tag": "official134_12000_motion_20",
+      "scope": "official134_12000/motions/15_right_elbow/default",
+      "key": [
+        "LB",
+        "START",
+        "Y"
+      ],
+      "frames": 244,
+      "original_frames": 119,
+      "original_npz_sha256": "dc4750a1ea426f58f7fba74e8245af0b6ec7ec8aadf2f3b07c15f6a7a4336952",
+      "trajectory_sha256": "d0592169d2b83394c7f263cdbf68128e9573eede27d8c3543429f95e24a03130"
+    },
+    {
+      "index": 21,
+      "motion": "17_right_hook_left_backfist_final",
+      "state": "tracking_21",
+      "tag": "official134_12000_motion_21",
+      "scope": "official134_12000/motions/17_right_hook_left_backfist_final/default",
+      "key": [
+        "LB",
+        "START",
+        "CROSS_X_UP"
+      ],
+      "frames": 267,
+      "original_frames": 142,
+      "original_npz_sha256": "7ebe63f547519a5e90a39dad0d2948a2e90bf0fb0da33a42d429a04dcd53783f",
+      "trajectory_sha256": "9d705d607cee3dd6077cc58e5fb7e3d1389bcb118e3e7db0935bc7e876936460"
+    },
+    {
+      "index": 22,
+      "motion": "18_right_kick",
+      "state": "tracking_22",
+      "tag": "official134_12000_motion_22",
+      "scope": "official134_12000/motions/18_right_kick/default",
+      "key": [
+        "LB",
+        "START",
+        "CROSS_X_DOWN"
+      ],
+      "frames": 258,
+      "original_frames": 133,
+      "original_npz_sha256": "07995874e2963292c8ca79bfe2ccfe809514618f7ce23ace33219f1ed8e14b6a",
+      "trajectory_sha256": "cb4005cdc67fb0e7c3b7ec5800f8c5ab5ec01592cedbdf87429fdd978fa2b1a9"
+    },
+    {
+      "index": 23,
+      "motion": "19_right_knee",
+      "state": "tracking_23",
+      "tag": "official134_12000_motion_23",
+      "scope": "official134_12000/motions/19_right_knee/default",
+      "key": [
+        "LB",
+        "START",
+        "CROSS_Y_LEFT"
+      ],
+      "frames": 261,
+      "original_frames": 136,
+      "original_npz_sha256": "b548f4c5f676984080ff4e36dbaa02ffd698f8081c1bf25dc3b647cd73c853b8",
+      "trajectory_sha256": "788bc71623dd64800a47c1bcd0561fc6d84556c4e5c99761f3e46040dac3cca2"
+    }
+  ]
+}

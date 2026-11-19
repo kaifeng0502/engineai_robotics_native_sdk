@@ -1,0 +1,179 @@
+{
+  "iteration": 12000,
+  "checkpoint": "/root/autodl-tmp/blinkmimic_t800_official134_transition_20261119/logs/blink134_transition_8000_to16000/ckpt_012000.pt",
+  "fresh_seeds": [
+    261120236,
+    261121237,
+    261122238
+  ],
+  "replicas_per_clip_per_seed": 4,
+  "total_physical_rollouts": 276,
+  "completion_rate": 1.0,
+  "settled_success_rate": 0.9963768115942028,
+  "worst_seed_settled_success_rate": 0.9891304347826086,
+  "original_motion_body_rmse_cm": 6.568350156148274,
+  "original_motion_joint_rmse_deg": 8.559795061747232,
+  "per_seed_summary": [
+    {
+      "seed": 261120236,
+      "completion_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_cm": 6.576590061187744,
+      "joint_deg": 8.569241523742676
+    },
+    {
+      "seed": 261121237,
+      "completion_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_cm": 6.5788116455078125,
+      "joint_deg": 8.553021430969238
+    },
+    {
+      "seed": 261122238,
+      "completion_rate": 1.0,
+      "settled_success_rate": 0.9891304347826086,
+      "body_cm": 6.549648761749268,
+      "joint_deg": 8.557122230529785
+    }
+  ],
+  "per_clip": {
+    "01_front_block": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 4.492896715799968,
+      "joint_rmse_deg": 6.491813977559407
+    },
+    "01_spin_kick_540": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 8.828805605570475,
+      "joint_rmse_deg": 11.897062301635742
+    },
+    "02_left_duck": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 4.373762925465901,
+      "joint_rmse_deg": 4.411986668904622
+    },
+    "03_right_duck": {
+      "success_rate": 1.0,
+      "settled_success_rate": 0.9166666666666666,
+      "body_aligned_rmse_cm": 7.38014570871989,
+      "joint_rmse_deg": 6.611594200134277
+    },
+    "03_right_duck_left_kick": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 5.100631554921468,
+      "joint_rmse_deg": 5.3832478523254395
+    },
+    "04_back_duck": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 3.48567525545756,
+      "joint_rmse_deg": 3.899587710698446
+    },
+    "04_left_duck_right_kick": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 11.691399256388346,
+      "joint_rmse_deg": 9.560336430867514
+    },
+    "05_hook_uppercut": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 5.821445941925049,
+      "joint_rmse_deg": 9.886192639668783
+    },
+    "06_left_arm_slam": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 4.853056907653809,
+      "joint_rmse_deg": 7.417359670003255
+    },
+    "06_right_kick_knee": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 6.0952480634053545,
+      "joint_rmse_deg": 6.333339850107829
+    },
+    "07_left_block": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 3.4442330996195474,
+      "joint_rmse_deg": 3.360417127609253
+    },
+    "07_left_side_kick": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 4.746675332387288,
+      "joint_rmse_deg": 5.083229859670003
+    },
+    "08_left_elbow": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 4.0088731447855634,
+      "joint_rmse_deg": 7.189069906870524
+    },
+    "09_left_hook_right_backfist": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 5.385407288869222,
+      "joint_rmse_deg": 8.038204828898111
+    },
+    "10_left_kick": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 3.9565231800079346,
+      "joint_rmse_deg": 4.976129055023193
+    },
+    "11_left_knee": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 3.675868193308512,
+      "joint_rmse_deg": 4.0700961748758955
+    },
+    "12_left_punch_right_kick": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 8.317416191101074,
+      "joint_rmse_deg": 7.189334710439046
+    },
+    "13_low_right_kick": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 4.799201329549153,
+      "joint_rmse_deg": 6.010149161020915
+    },
+    "14_right_arm_slam": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 4.404853820800781,
+      "joint_rmse_deg": 6.62661091486613
+    },
+    "15_right_elbow": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 3.968841075897217,
+      "joint_rmse_deg": 5.821350733439128
+    },
+    "17_right_hook_left_backfist_final": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 7.470683256785075,
+      "joint_rmse_deg": 12.765440305074057
+    },
+    "18_right_kick": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 4.3483560880025225,
+      "joint_rmse_deg": 5.038232167561849
+    },
+    "19_right_knee": {
+      "success_rate": 1.0,
+      "settled_success_rate": 1.0,
+      "body_aligned_rmse_cm": 3.7313550313313804,
+      "joint_rmse_deg": 4.139267603556315
+    }
+  }
+}

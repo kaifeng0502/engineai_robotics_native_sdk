@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "iteration": 12000,
+  "input_dim": 134,
+  "output_dim": 25,
+  "normalization_included": true,
+  "fixture_samples": 203,
+  "onnx_vs_pytorch_max_abs": 5.245208740234375e-06,
+  "mnn_vs_pytorch_max_abs": 4.2110681533813477e-05,
+  "mnn_sha256": "40b70a519a01fbc05027a3624ffb3e47d035b40316345d5023d7deda3a81fd75"
+}

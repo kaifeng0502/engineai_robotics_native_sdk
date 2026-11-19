@@ -1,0 +1,24 @@
+﻿状态,动作,按键
+tracking_01,01_front_block,RB + START + A
+tracking_02,01_spin_kick_540,RB + START + B
+tracking_03,02_left_duck,RB + START + X
+tracking_04,03_right_duck,RB + START + Y
+tracking_05,03_right_duck_left_kick,RB + START + CROSS_X_UP
+tracking_06,04_back_duck,RB + START + CROSS_X_DOWN
+tracking_07,04_left_duck_right_kick,RB + START + CROSS_Y_LEFT
+tracking_08,05_hook_uppercut,RB + START + CROSS_Y_RIGHT
+tracking_09,06_left_arm_slam,RB + BACK + A
+tracking_10,06_right_kick_knee,RB + BACK + B
+tracking_11,07_left_block,RB + BACK + X
+tracking_12,07_left_side_kick,RB + BACK + Y
+tracking_13,08_left_elbow,RB + BACK + CROSS_X_UP
+tracking_14,09_left_hook_right_backfist,RB + BACK + CROSS_X_DOWN
+tracking_15,10_left_kick,RB + BACK + CROSS_Y_LEFT
+tracking_16,11_left_knee,RB + BACK + CROSS_Y_RIGHT
+tracking_17,12_left_punch_right_kick,LB + START + A
+tracking_18,13_low_right_kick,LB + START + B
+tracking_19,14_right_arm_slam,LB + START + X
+tracking_20,15_right_elbow,LB + START + Y
+tracking_21,17_right_hook_left_backfist_final,LB + START + CROSS_X_UP
+tracking_22,18_right_kick,LB + START + CROSS_X_DOWN
+tracking_23,19_right_knee,LB + START + CROSS_Y_LEFT
